@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMover : MonoBehaviour
 {
-    public float time = 1f;
+    public float speed = 1f;
     public GameObject target;// Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,6 @@ public class EnemyMover : MonoBehaviour
         } else if(target.transform.position.y < transform.position.y){
             transform.Translate(0, -0.5f, 0);
         }
-        Invoke("Move", time);
+        Invoke("Move", speed);
     }
 }
